@@ -1,0 +1,42 @@
+﻿<Window x:Class="Kursovay1kurs.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kursovay1kurs"
+        mc:Ignorable="d"
+        Title="Автомат Мили по JK - триггеру" Height="450" Width="800">
+    <Grid Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image 
+            Name="img" 
+            Source="C:\Users\Anton\Desktop\2 курс\1 семестр\Теория информационных процессов и систем\Курсовая 3 семестр\Автомат милли\автомат Мили.bmp" 
+            HorizontalAlignment="Left" 
+            Height="410" 
+            Margin="10,0,0,0" 
+            VerticalAlignment="Top" 
+            Width="474" 
+            RenderTransformOrigin="-1.008,0.592">
+        </Image>
+        <Button Content="x0" HorizontalAlignment="Left" Margin="489,10,0,0" VerticalAlignment="Top" Width="75" Click="x0"/>
+        <Button Content="x1" HorizontalAlignment="Left" Margin="489,34,0,0" VerticalAlignment="Top" Width="75" Click="x1"/>
+        <Button Content="x2" HorizontalAlignment="Left" Margin="489,58,0,0" VerticalAlignment="Top" Width="75" Click="x2"/>
+        <Button Content="x3" HorizontalAlignment="Left" Margin="489,82,0,0" VerticalAlignment="Top" Width="75" Click="x3"/>
+        <Button Content="x4" HorizontalAlignment="Left" Margin="569,10,0,0" VerticalAlignment="Top" Width="75" Click="x4"/>
+        <Button Content="x5" HorizontalAlignment="Left" Margin="569,34,0,0" VerticalAlignment="Top" Width="75" Click="x5"/>
+        <Button Content="x6" HorizontalAlignment="Left" Margin="569,58,0,0" VerticalAlignment="Top" Width="75" Click="x6"/>
+        <Button Content="x7" HorizontalAlignment="Left" Margin="569,82,0,0" VerticalAlignment="Top" Width="75" Click="x7"/>
+
+        <Border HorizontalAlignment="Left" VerticalAlignment="Top" Height="Auto" Margin="489,106,0,0" Width="156" BorderBrush="Black" BorderThickness="2">
+            <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" Margin="0.4,0,-18.6,0" HorizontalAlignment="Left" Width="171">
+                <Grid Name="hisCon" ShowGridLines="True" HorizontalAlignment="Left" Height="Auto" Margin="-1.6,-1.6,-1.4,-1.2" VerticalAlignment="Top" Width="Auto">
+
+                </Grid>
+            </ScrollViewer>
+        </Border>
+        <Button Content="Перейти к &#xD;&#xA;сети Петри" HorizontalAlignment="Left" Height="36" Margin="688,10,0,0" VerticalAlignment="Top" Width="96" Click="GoToPetriNet"/>
+
+    </Grid>
+</Window>
