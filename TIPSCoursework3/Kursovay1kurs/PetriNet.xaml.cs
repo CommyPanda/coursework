@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
 
-//sometext
+//added some text from console
 namespace Kursovay1kurs
 {
     /// <summary>
