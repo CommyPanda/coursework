@@ -25,6 +25,8 @@ namespace Kursovay1kurs
         {
             InitializeComponent();
 
+            int x = 0;
+
             ListOfConditions.Items.Add("t0");
             ListOfConditions.Items.Add("t1");
             ListOfConditions.Items.Add("t2");
@@ -85,7 +87,7 @@ namespace Kursovay1kurs
             switch(ListOfConditions.SelectedIndex)
             {
                 case 0:
-                    CurrentCondition.Text = "working!";
+                    CurrentCondition.Text = "";
                     break;
                 case 1:
                     break;
