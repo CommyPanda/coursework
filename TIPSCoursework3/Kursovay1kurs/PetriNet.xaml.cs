@@ -25,8 +25,6 @@ namespace Kursovay1kurs
         {
             InitializeComponent();
 
-            int x = 0;
-
             ListOfConditions.Items.Add("t0");
             ListOfConditions.Items.Add("t1");
             ListOfConditions.Items.Add("t2");
@@ -62,6 +60,8 @@ namespace Kursovay1kurs
             CurrentCondition.Text = "S0";
 
         }
+
+
         /*
         private void Transition(object sender, RoutedEventArgs e)
         {
@@ -82,74 +82,111 @@ namespace Kursovay1kurs
             }
         }
         */
+        Position currentPos = new Position();
         private void Transition(object sender, RoutedEventArgs e)
         {
             switch(ListOfConditions.SelectedIndex)
             {
                 case 0:
-                    CurrentCondition.Text = "";
+                    if(currentPos.T0())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 1:
+                    currentPos.T1();
                     break;
                 case 2:
+                    currentPos.T2();
                     break;
                 case 3:
+                    currentPos.T3();
                     break;
                 case 4:
+                    currentPos.T4();
                     break;
                 case 5:
+                    currentPos.T5();
                     break;
                 case 6:
+                    currentPos.T6();
                     break;
                 case 7:
+                    currentPos.T7();
                     break;
                 case 8:
+                    currentPos.T8();
                     break;
                 case 9:
+                    currentPos.T9();
                     break;
                 case 10:
+                    currentPos.T10();
                     break;
                 case 11:
+                    currentPos.T11();
                     break;
                 case 12:
+                    currentPos.T12();
                     break;
                 case 13:
+                    currentPos.T13();
                     break;
                 case 14:
+                    currentPos.T14();
                     break;
                 case 15:
+                    currentPos.T15();
                     break;
                 case 16:
+                    currentPos.T16();
                     break;
                 case 17:
+                    currentPos.T17();
                     break;
                 case 18:
+                    currentPos.T18();
                     break;
                 case 19:
+                    currentPos.T19();
                     break;
                 case 20:
+                    currentPos.T20();
                     break;
                 case 21:
+                    currentPos.T21();
                     break;
                 case 22:
+                    currentPos.T22();
                     break;
                 case 23:
+                    currentPos.T23();
                     break;
                 case 24:
+                    currentPos.T24();
                     break;
                 case 25:
+                    currentPos.T25();
                     break;
                 case 26:
+                    currentPos.T26();
                     break;
                 case 27:
+                    currentPos.T27();
                     break;
                 case 28:
+                    currentPos.T28();
                     break;
                 case 29:
+                    currentPos.T29();
                     break;
                 case 30:
+                    currentPos.T30();
                     break;
                 case 31:
+                    currentPos.T31();
                     break;
             }
         }

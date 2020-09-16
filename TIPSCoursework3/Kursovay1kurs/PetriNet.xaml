@@ -10,7 +10,7 @@
         <Button Content="        Перейти к&#xD;&#xA; конечному автомату" HorizontalAlignment="Left" Height="41" Margin="648,10,0,0" VerticalAlignment="Top" Width="136" Click="GoToFinStMachine"/>
         <ListBox Name="ListOfConditions" HorizontalAlignment="Left" Height="300" Margin="20,20,0,0" VerticalAlignment="Top" Width="140"/>
         <Button Content="Выполнить переход" HorizontalAlignment="Left" Height="25" Margin="20,325,0,0" VerticalAlignment="Top" Width="188" Click="Transition" RenderTransformOrigin="0.532,-2.992"/>
-        <TextBox Name="CurrentCondition" IsReadOnly="True" HorizontalAlignment="Left" Height="20" Margin="393,19,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="40" />
+        <TextBox Name="CurrentCondition" IsReadOnly="True" HorizontalAlignment="Left" Height="75" Margin="180,45,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="380" />
         <Label Content="Текущее состояние:" HorizontalAlignment="Left" Margin="275,15,0,0" VerticalAlignment="Top" Height="25"/>
 
     </Grid>
