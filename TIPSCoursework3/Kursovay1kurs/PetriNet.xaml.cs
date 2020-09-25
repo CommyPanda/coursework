@@ -57,7 +57,9 @@ namespace Kursovay1kurs
             ListOfConditions.Items.Add("t29");
             ListOfConditions.Items.Add("t30");
             ListOfConditions.Items.Add("t31");
-            CurrentCondition.Text = "S0";
+            CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
 
         }
 
@@ -96,97 +98,237 @@ namespace Kursovay1kurs
                         CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 1:
-                    currentPos.T1();
+                    if (currentPos.T1())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 2:
-                    currentPos.T2();
+                    if (currentPos.T2())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 3:
-                    currentPos.T3();
-                    break;
+                    if (currentPos.T3())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 4:
-                    currentPos.T4();
+                    if (currentPos.T4())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 5:
-                    currentPos.T5();
+                    if (currentPos.T5())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 6:
-                    currentPos.T6();
+                    if (currentPos.T6())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 7:
-                    currentPos.T7();
+                    if (currentPos.T7())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 8:
-                    currentPos.T8();
+                    if (currentPos.T8())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 9:
-                    currentPos.T9();
+                    if (currentPos.T9())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 10:
-                    currentPos.T10();
+                    if (currentPos.T10())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 11:
-                    currentPos.T11();
+                    if (currentPos.T11())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 12:
-                    currentPos.T12();
+                    if (currentPos.T12())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 13:
-                    currentPos.T13();
+                    if (currentPos.T13())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 14:
-                    currentPos.T14();
+                    if (currentPos.T14())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 15:
-                    currentPos.T15();
+                    if (currentPos.T15())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 16:
-                    currentPos.T16();
-                    break;
+                    if (currentPos.T16())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 17:
-                    currentPos.T17();
-                    break;
+                    if (currentPos.T17())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 18:
-                    currentPos.T18();
-                    break;
+                    if (currentPos.T18())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 19:
-                    currentPos.T19();
-                    break;
+                    if (currentPos.T19())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 20:
-                    currentPos.T20();
-                    break;
+                    if (currentPos.T20())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 21:
-                    currentPos.T21();
-                    break;
+                    if (currentPos.T21())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 22:
-                    currentPos.T22();
-                    break;
+                    if (currentPos.T22())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 23:
-                    currentPos.T23();
-                    break;
+                    if (currentPos.T23())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 24:
-                    currentPos.T24();
-                    break;
+                    if (currentPos.T24())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 25:
-                    currentPos.T25();
-                    break;
+                    if (currentPos.T25())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 26:
-                    currentPos.T26();
-                    break;
+                    if (currentPos.T26())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 27:
-                    currentPos.T27();
-                    break;
+                    if (currentPos.T27())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 28:
-                    currentPos.T28();
-                    break;
+                    if (currentPos.T28())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 29:
-                    currentPos.T29();
-                    break;
+                    if (currentPos.T29())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied"; break;
                 case 30:
-                    currentPos.T30();
+                    if (currentPos.T30())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
                 case 31:
-                    currentPos.T31();
+                    if (currentPos.T31())
+                        CurrentCondition.Text = $"x0({currentPos.Getx0()}), x1({currentPos.Getx1()}), x2({currentPos.Getx2()}), x3({currentPos.Getx3()}), x4({currentPos.Getx4()}), x5({currentPos.Getx5()}), x6({currentPos.Getx6()}), x7({currentPos.Getx7()})\n" +
+                            $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
+                            $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
+                    else
+                        CurrentCondition.Text = "Error: transition is denied";
                     break;
             }
         }

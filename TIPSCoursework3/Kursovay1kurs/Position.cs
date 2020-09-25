@@ -10,6 +10,8 @@ namespace Kursovay1kurs
     {
         private int x0, x1, x2, x3, x4, x5, x6, x7, S0, S1, S2, S3, y0, y1;
 
+        private bool[,] accessTree;
+
         public Position()
         {
             x0 = 100; x1 = 100; x2 = 100; x3 = 100; x4 = 100; x5 = 100; x6 = 100; x7 = 100;
