@@ -10,7 +10,7 @@ namespace Kursovay1kurs
     {
         private int x0, x1, x2, x3, x4, x5, x6, x7, S0, S1, S2, S3, y0, y1;
 
-        private bool[,] accessTree;
+        //private bool[,] accessTree = new bool[31, 31];  
 
         public Position()
         {
@@ -19,6 +19,60 @@ namespace Kursovay1kurs
             y0 = 0; y1 = 0;
         }
 
+        
+        public void CheckAccessToTransition(ref bool[] AccessArray)
+        {
+            Func<bool>[] Transitions = new Func<bool>[32];
+
+            Transitions[0] = T0;
+            Transitions[1] = T1;
+            Transitions[2] = T2;
+            Transitions[3] = T3;
+            Transitions[4] = T4;
+            Transitions[5] = T5;
+            Transitions[6] = T6;
+            Transitions[7] = T7;
+            Transitions[8] = T8;
+            Transitions[9] = T9;
+
+            Transitions[10] = T10;
+            Transitions[11] = T11;
+            Transitions[12] = T12;
+            Transitions[13] = T13;
+            Transitions[14] = T14;
+            Transitions[15] = T15;
+            Transitions[16] = T16;
+            Transitions[17] = T17;
+            Transitions[18] = T18;
+            Transitions[19] = T19;
+
+            Transitions[20] = T20;
+            Transitions[21] = T21;
+            Transitions[22] = T22;
+            Transitions[23] = T23;
+            Transitions[24] = T24;
+            Transitions[25] = T25;
+            Transitions[26] = T26;
+            Transitions[27] = T27;
+            Transitions[28] = T28;
+            Transitions[29] = T29;
+
+            Transitions[30] = T30;
+            Transitions[31] = T31;
+
+            for (int i = 0; i < 32; i++)
+            {
+                Position tmp = this.Clone();
+
+                if (tmp.Transitions[i]())
+                {
+                    AccessArray[0] = true;
+                }
+            }
+
+
+
+        }
         public bool T0()
         {
             if (S0 - 1 >= 0 && x0 - 1 >= 0) 
