@@ -21,9 +21,11 @@ namespace Kursovay1kurs
     /// </summary>
     public partial class PetriNet : Window
     {
+        Position currentPos = new Position();
         public PetriNet()
         {
             InitializeComponent();
+
 
             ListOfConditions.Items.Add("t0");
             ListOfConditions.Items.Add("t1");
@@ -61,6 +63,17 @@ namespace Kursovay1kurs
                             $"S0({currentPos.GetS0()}), S1({currentPos.GetS1()}), S2({currentPos.GetS2()}), S3({currentPos.GetS3()})\n" +
                             $"y0({currentPos.Gety0()}), y1({currentPos.Gety1()})";
 
+            bool[] TArray = new bool[32];
+            currentPos.CheckAccessToTransition(ref TArray);
+
+            for(int i=0;i<32;i++)
+            {
+                if(TArray[i])
+                {
+                    PossibleTransitions.Text += $"t{i} ";
+                }
+                
+            }
         }
 
 
@@ -84,10 +97,13 @@ namespace Kursovay1kurs
             }
         }
         */
-        Position currentPos = new Position();
+ 
         private void Transition(object sender, RoutedEventArgs e)
         {
-            switch(ListOfConditions.SelectedIndex)
+            PossibleTransitions.Clear();
+            bool[] TArray = new bool[32];
+
+            switch (ListOfConditions.SelectedIndex)
             {
                 case 0:
                     if(currentPos.T0())
@@ -330,6 +346,17 @@ namespace Kursovay1kurs
                     else
                         CurrentCondition.Text = "Error: transition is denied";
                     break;
+            }
+
+            currentPos.CheckAccessToTransition(ref TArray);
+
+            for (int i = 0; i < 32; i++)
+            {
+                if (TArray[i])
+                {
+                    PossibleTransitions.Text += $"t{i} ";
+                }
+
             }
         }
     private void GoToFinStMachine(object sender, RoutedEventArgs e)
