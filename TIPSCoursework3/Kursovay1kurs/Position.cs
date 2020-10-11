@@ -25,6 +25,13 @@ namespace Kursovay1kurs
             y0 = prevPosition.y0; y1 = prevPosition.y1;
         }
 
+        public void Copy(Position prevPosition)
+        {
+            x0 = prevPosition.x0; x1 = prevPosition.x1; x2 = prevPosition.x2; x3 = prevPosition.x3; x4 = prevPosition.x4; x5 = prevPosition.x5; x6 = prevPosition.x6; x7 = prevPosition.x7;
+            S0 = prevPosition.S0; S1 = prevPosition.S1; S2 = prevPosition.S2; S3 = prevPosition.S3;
+            y0 = prevPosition.y0; y1 = prevPosition.y1;
+        }
+
         public delegate bool ArrayOfTran();
         public void CheckAccessToTransition(ref bool[] AccessArray)
         {
@@ -44,7 +51,7 @@ namespace Kursovay1kurs
                 if (Transitions[i]())
                 {
                     AccessArray[i] = true;
-                    tmp = new Position(this);
+                    tmp.Copy(this);
                 }
             }
 
