@@ -28,23 +28,23 @@ namespace Kursovay1kurs
         public delegate bool ArrayOfTran();
         public void CheckAccessToTransition(ref bool[] AccessArray)
         {
+            Position tmp = new Position(this);
             ArrayOfTran[] Transitions = new ArrayOfTran[]
             {
-                T0, T1, T2, T3, T4, T5, T6, T7, T8, T9, 
-                T10, T11, T12, T13, T14, T15, T16, T17, T18, T19,
-                T20, T21, T22, T23, T24, T25, T26, T27, T28, T29,
-                T30, T31
+                tmp.T0, tmp.T1, tmp.T2, tmp.T3, tmp.T4, tmp.T5, tmp.T6, tmp.T7, tmp.T8, tmp.T9,
+                tmp.T10, tmp.T11, tmp.T12, tmp.T13, tmp.T14, tmp.T15, tmp.T16, tmp.T17, tmp.T18, tmp.T19,
+                tmp.T20, tmp.T21, tmp.T22, tmp.T23, tmp.T24, tmp.T25, tmp.T26, tmp.T27, tmp.T28, tmp.T29,
+                tmp.T30, tmp.T31
             };
 
             
 
             for (int i = 0; i < 32; i++)
             {
-                Position tmp = this;
-
-                if (Transitions[0]())
+                if (Transitions[i]())
                 {
-                    AccessArray[0] = true;
+                    AccessArray[i] = true;
+                    tmp = new Position(this);
                 }
             }
 
